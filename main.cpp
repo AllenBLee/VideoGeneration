@@ -28,8 +28,6 @@ bool outside_frame(int * x, int * y) {
 	return *x < 0 || *x >= W || *y < 0 || *y >= H;
 }
 
-//153, 18, 18
-
 void draw_rect(int x, int y, int w, int h, byte r, byte g, byte b) {
 	if (outside_frame(&x, &y)) return;
 	clamp(&x, &y);
@@ -47,9 +45,6 @@ void draw_rect(int x, int y, int w, int h, byte r, byte g, byte b) {
 		}
 	}
 }
-
-//Main Drawing Code.
-//Expand this function to add content to the video.
 
 void draw_frame(int t) {
 	clear_frame();
